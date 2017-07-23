@@ -3,6 +3,11 @@ body
  padding 0
  width 100%
  height 100%
+ background: -webkit-radial-gradient(circle, #0B486B, #F56217); /* For Safari 5.1 to 6.0 */
+ background: -o-radial-gradient(circle, #0B486B, #F56217); /* For Opera 11.6 to 12.0 */
+ background: -moz-radial-gradient(circle, #0B486B, #F56217); /* For Fx 3.6 to 15 */
+ background: radial-gradient(circle, #0B486B, #F56217); 
+ 
 
 
 .bubble-bag
@@ -12,7 +17,7 @@ body
  flex-flow column nowrap
  align-items center
  justify-content center
- 
+
 .bubble
  width 400px
  height 400px
@@ -30,10 +35,20 @@ body
  font-weight: 600;
  font-size: 1.5em;
  background-color: rgba(0,0,0, 0.5);
+ padding: 5px
+ box-sizing border-box
  display flex
  flex-flow column nowrap
  align-items center
  justify-content center
+ width: 50px;
+ height: 80px;
+ -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+ border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+ transition: all .07s ease;
+ p
+  margin-bottom 5px
+  text-transform uppercase
  
 .leaf1
   top: -10%
@@ -44,3 +59,51 @@ body
   top: -8%;
   right: 10%;
   transform: rotate(35deg);
+  
+.leaf3
+ top: 21%;
+ right: -10%;
+ transform: rotate(65deg);
+ 
+.leaf4
+ top: 60%;
+ right: -10%;
+ transform: rotate(110deg);
+    
+.leaf5
+ bottom: -10%;
+ right: 11%;
+ transform: rotate(141deg);
+ 
+.leaf6
+  bottom: -22%
+  left:50%
+  transform: translate(-50%, -50%)
+  transform: rotate(180deg);
+  
+.leaf7
+ bottom: -10%;
+ left: 11%;
+ transform: rotate(221deg);
+ 
+.leaf8
+ top: 59%;
+ left: -10%;
+ transform: rotate(250deg);
+ 
+.leaf9
+ top: 17%;
+ left: -10%;
+ transform: rotate(-65deg);
+ 
+
+.leaf10
+  top: -10%;
+  left: 10%;
+  transform: rotate(-35deg);
+  
+.playing
+ transform: rotate(360deg);
+ border-color: #ffc600;
+ box-shadow: 0 0 1rem #ffc600;
+ 
